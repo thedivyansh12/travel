@@ -64,7 +64,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 60px;
+      gap: 120px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .animated {
+      animation: moveUp 18s linear infinite;
+    }
+
+    @keyframes moveUp {
+      0% {
+        transform: translateY(300px);
+      }
+      100% {
+        transform: translateY(-900px);
+      }
     }
 
     /* White square photo card */
@@ -152,29 +167,31 @@
   </section>
 
   <section class="timeline">
-    <div class="timeline-column">
+  <svg width="400" height="900" viewBox="0 0 400 900" style="position:absolute; left:50%; transform:translateX(-50%); z-index:0;">
+    <path d="M200 50 C100 200, 300 350, 200 500 C100 650, 300 800, 200 900" 
+          stroke="white" stroke-width="4" fill="none" />
+  </svg>
 
-      <div class="place">
-        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountains" />
-      </div>
-      <div class="arrow"></div>
+  <div class="timeline-column animated">
 
-      <div class="place">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" />
-      </div>
-      <div class="arrow"></div>
-
-      <div class="place">
-        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="City" />
-      </div>
-      <div class="arrow"></div>
-
-      <div class="place">
-        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="Forest" />
-      </div>
-
+    <div class="place">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountains" />
     </div>
-  </section>
+
+    <div class="place">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" />
+    </div>
+
+    <div class="place">
+      <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="City" />
+    </div>
+
+    <div class="place">
+      <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="Forest" />
+    </div>
+
+  </div>
+</section>
 
   <footer>
     <p>Designed with ❤️ for travel lovers</p>
@@ -182,3 +199,4 @@
 
 </body>
 </html>
+
