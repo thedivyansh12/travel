@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Journey</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Paragraph section */
+    .about {
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      line-height: 1.7;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+      color: #2c5364;
+    }
+
+    /* Timeline container */
+    .timeline {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 60px 0;
+    }
+
+    .timeline-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* White square photo card */
+    .place {
+      width: 260px;
+      height: 260px;
+      background: white;
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .place:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+    }
+
+    .place img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /* Arrow between cards */
+    .arrow {
+      width: 4px;
+      height: 50px;
+      background: white;
+      position: relative;
+    }
+
+    .arrow::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 14px solid white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      color: white;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .place {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wander the World</h1>
+    <p>A visual journey from one destination to another</p>
+  </header>
+
+  <section class="about">
+    <h2>Why Traveling Matters</h2>
+    <p>
+      Traveling is more than just moving from one place to another; it is a journey of self-discovery. Every destination
+      introduces us to new cultures, different perspectives, and unforgettable experiences. The sound of unfamiliar
+      languages, the taste of local food, and the beauty of landscapes far from home help us grow as individuals.
+      
+      Traveling teaches patience, adaptability, and appreciation for the diversity of the world. Whether it is standing
+      in front of snow-covered mountains, walking through historic streets, or watching a sunset by the sea, each moment
+      becomes a memory that stays forever. In the end, we don’t just visit places — the places change us.
+    </p>
+  </section>
+
+  <section class="timeline">
+    <div class="timeline-column">
+
+      <div class="place">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountains" />
+      </div>
+      <div class="arrow"></div>
+
+      <div class="place">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach" />
+      </div>
+      <div class="arrow"></div>
+
+      <div class="place">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="City" />
+      </div>
+      <div class="arrow"></div>
+
+      <div class="place">
+        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff" alt="Forest" />
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed with ❤️ for travel lovers</p>
+  </footer>
+
+</body>
+</html>
